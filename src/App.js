@@ -1,5 +1,17 @@
+import React from 'react';
+import Konami from 'react-konami-code';
 import logo from './logo.svg';
 import './App.css';
+
+class KonamiCode extends React.Component {
+  easterEgg = () => {
+    alert('Autor: José Lópex Chávez.');
+  }
+
+  render = () => (
+    <Konami action={this.easterEgg} />
+  )
+}
 
 function App() {
   return (
@@ -7,17 +19,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          ↑ ↑ ↓ ↓ ← → ← → B A
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <KonamiCode />
     </div>
   );
 }
